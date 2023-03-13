@@ -1,4 +1,4 @@
-package com.example.interviewsland_mobile_android
+package com.example.interviewsland_mobile_android.ui.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
