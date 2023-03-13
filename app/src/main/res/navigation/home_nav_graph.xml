@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.interviewsland_mobile_android.ui.view.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_sectionFragment"
+            app:destination="@id/sectionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_savedQuestionsFragment"
+            app:destination="@id/savedQuestionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionsFragment"
+        android:name="com.example.interviewsland_mobile_android.ui.view.fragment.home.QuestionsFragment"
+        android:label="fragment_questions"
+        tools:layout="@layout/fragment_questions" />
+    <fragment
+        android:id="@+id/sectionFragment"
+        android:name="com.example.interviewsland_mobile_android.ui.view.fragment.home.SectionFragment"
+        android:label="fragment_section"
+        tools:layout="@layout/fragment_section" >
+        <action
+            android:id="@+id/action_sectionFragment_to_questionsFragment"
+            app:destination="@id/questionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.interviewsland_mobile_android.ui.view.fragment.home.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/savedQuestionsFragment"
+        android:name="com.example.interviewsland_mobile_android.ui.view.fragment.home.SavedQuestionsFragment"
+        android:label="fragment_saved_questions"
+        tools:layout="@layout/fragment_saved_questions" />
+</navigation>
